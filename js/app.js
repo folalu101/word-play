@@ -1,29 +1,35 @@
 $(document).ready(function(){
-   $("#form-body").submit(function(event){
+   $("#form-main").submit(function(event){
+   
+    // console.log("it works! ");
 
     let text = $("#word").val();
+    // console.log(text);
     let bigText = [];
     let  sentence = text.split([""]);
+    // console.log(sentence);
 
 
     sentence.forEach(function(message){
         if (message.length >= 3) {
             bigText.push(message);
         }
+        // console.log(bigText);
     });
-
-
-    // $("#show-text").show();
-
-
-    event.preventDefault();
-   
     bigText = bigText.reverse();
     bigText = bigText.join("");
- 
+    // console.log(bigText);
+
+    $("#show-text").show();
+    
+
+
+    
+    event.preventDefault();
+   
    });
    
-  
+//    console.log("it works");
   
 
   
